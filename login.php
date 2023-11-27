@@ -24,7 +24,7 @@
             //check password
             $correct = password_verify($password,$list[0]['PASSWORD']);
             if($correct){
-                header("Location: menuutama.html");
+                header("Location: haldetail.html");
                 exit(); // Make sure to exit after redirection
             } else {
                 // Password is incorrect
