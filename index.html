@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!--Navbar-->
+        <div class="row navbar navbar-expand-lg static-top navbar-light bg-light">
+            <!--Banner-->
+            <h2 class="nav-item active mr-auto mt-1">Catatan Semua</h2>
+            <!--Login Area-->
+            <div class="navbar-nav">
+                <div class="nav-item">
+                    <!--Login Form-->
+                    <form action="login.php" method="POST" class="form-inline">
+                        <input type="text" class="form-control mt-1 mr-1" placeholder="Username" name="username">
+                        <input type="password" class="form-control mt-1 mr-1" placeholder="Passsword" name="password">
+                        <button type="submit" class="btn btn-success mt-1">Login</button>
+                        <a href="#" class="ml-1 text-muted">Forgot Passowrd?</a>
+                    </form>
+                </div>
+            </div>
+	    </div>
+        <!--End Navbar-->
+
+        <!--Registration Form-->
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+                <div class="card card-body bg-light text-center mt-5">
+                    <h4 class="heading card-title">SignUp Here</h4>
+                    <form action="register.php" method="POST" class="card-body">
+                        <!--Username-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fa fa-user-o input-group-addon"></i>
+                                <input type="text" class="form-control" placeholder="Create Username" name="username">
+                            </div>
+                        </div>
+                        <!--Email-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fa fa-at input-group-addon"></i>
+                                <input type="email" class="form-control" placeholder="Email Address" name="email">
+                            </div>
+                        </div>
+                        <!--Create Password-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fa fa-key input-group-addon"></i>
+                                <input type="password" class="form-control" placeholder="Create Password" name="password">
+                            </div>
+                        </div>
+                        <!--Confirm Password-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fa fa-legal input-group-addon"></i>
+                                <input type="password" class="form-control" placeholder="Confirm Password" name="cpassword">
+                            </div>
+                        </div>
+                        <!--Submit-->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block">Complete Registration <i class="fa fa-handshake-o"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--End Registration Form-->
+    </div>
+</body>
+</html>
