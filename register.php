@@ -1,13 +1,12 @@
 <!--registration process-->
 <?php
-    //include db connection
-    include 'config/db.php';
+include("config/connection.php");
 
     //get user inputs
-    $username = mysqli_real_escape_string($conn, $_POST["username"]);
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $password = mysqli_real_escape_string($conn, $_POST["password"]);
-    $cpassword = mysqli_real_escape_string($conn, $_POST["cpassword"]);
+    $username = mysqli_real_escape_string($db, $_POST["username"]);
+    $email = mysqli_real_escape_string($db, $_POST["email"]);
+    $password = mysqli_real_escape_string($db, $_POST["password"]);
+    $cpassword = mysqli_real_escape_string($db, $_POST["cpassword"]);
 
     if($username == '' || $email == '' || $password == '' || $cpassword == '')
         echo 'No field can be blank';
@@ -20,7 +19,7 @@
         //add user to db table query
         $query = "INSERT INTO users(USERNAME, EMAIL, PASSWORD) values('$username','$email','$password')";
 
-        if(mysqli_query($conn,$query))
+        if(mysqli_query($db,$query))
             echo 'Registration Successful';
         else
             echo 'Registration Failed';

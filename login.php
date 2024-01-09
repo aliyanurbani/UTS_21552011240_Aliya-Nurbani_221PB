@@ -1,18 +1,17 @@
 <!--login process-->
 <?php
-    //include db connection
-    include 'config/db.php';
+include("config/connection.php");
 
     //get user inputs
-    $username = mysqli_real_escape_string($conn, $_POST["username"]);
-    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+    $username = mysqli_real_escape_string($db, $_POST["username"]);
+    $password = mysqli_real_escape_string($db, $_POST["password"]);
 
     if($username == '' || $password == '')
         echo 'No field can be blank';
     else{
         //find user in db table
         $query = "SELECT * FROM users WHERE USERNAME='$username'";
-        $users = mysqli_query($conn,$query);//execute query and return results into variable
+        $users = mysqli_query($db,$query);//execute query and return results into variable
 
         $count = mysqli_num_rows($users);//count number of rows returned
         
